@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta Letras</title>
+</head>
+<body>
+    <p>Digite uma frase: <input type="text" id="texto"</p>
+    <p>Quantidade de letras<input type="text" id="resposta" size="5" disabled</p>
+    <button id="contar">CONTAR</button>
+    <button id="voltar">VOLTAR</button>
+</body>
+<script>
+     let btn1 = document.getElementById("contar")
+        btn1.addEventListener("click", () =>{
+            let texto = document.getElementById("texto").value;
+            let tamanho = texto.length
+            var letras=""
+            for (let i = 0;i < tamanho; i ++){
+                if(!([" "].indexOf(texto[i])> -1)){
+                    letras = letras+texto[i]
+                }
+            }
+            document.getElementById("contar").value=letras
+            document.getElementById("resposta").value=letras.length
+        });
+        document.getElementById("voltar").addEventListener("click", () =>{
+        window.location="http://localhost/";
+        })
+</script>
+</html>

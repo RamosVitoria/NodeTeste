@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma Números</title>
+</head>
+<body>
+    <p>Digite o primeiro número: <input type="text" id="num1" size="5"</p>
+    <p>Digite o segundo número: <input type="text" id="num2" size="5"</p>
+    <p>Resultado<input type="text" id="resultado" size="5" disabled</p>
+    <button id="somar">SOMAR</button>
+    <button id="voltar">VOLTAR</button>
+</body>
+<script>
+   let btn1 = document.getElementById("somar")
+        btn1.addEventListener("click", () =>{
+            // Obter os valores digitados
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+        
+            // Calcular a soma dos números
+            var soma = num1 + num2;
+            
+            // Exibir os resultados
+            document.getElementById("resultado").value = soma;
+        });
+        document.getElementById("voltar").addEventListener("click", () =>{
+        window.location="http://localhost/";
+        });
+</script>
+</html>
